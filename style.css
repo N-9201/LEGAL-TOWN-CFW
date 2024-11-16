@@ -1,0 +1,111 @@
+:root {
+    --main-color: #ff5722; /* اللون البرتقالي */
+    --background-color: #000000; /* الخلفية السوداء */
+    --text-color: #ffffff; /* لون النص */
+    --highlight-color: rgba(255, 87, 34, 0.8); /* تمييز */
+    --transparent-bg: rgba(0, 0, 0, 0.6); /* خلفية شفافة */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Tajawal", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow: auto; /* السماح بالتمرير */
+    position: relative;
+    line-height: 1.8;
+    -webkit-user-select: none; /* منع التحديد */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-bottom: 30px; /* إضافة مساحة أسفل الصفحة لضمان أن النص لا يختفي */
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://1.bp.blogspot.com/-D7gWiXLf7Io/ZLukBprdMVI/AAAAAAAAJlY/zn6e0aGbPvEnAlVXBoky3_Y1PqUdzHK1gCNcBGAsYHQ/s16000/%25D8%25AE%25D9%2584%25D9%2581%25D9%258A%25D8%25A7%25D8%25AA%2B%25D9%2585%25D8%25AF%25D9%258A%25D9%2586%25D8%25A9%2B%25D9%2584%25D8%25B9%25D8%25A8%25D8%25A9%2B%25D9%2582%25D8%25B1%25D8%25A7%25D9%2586%25D8%25AF%2B5%2B%25D9%2581%25D8%25AE%25D9%2585%25D8%25A9%2B%25D8%25B9%25D9%2586%25D8%25AF%2B%25D8%25BA%25D8%25B1%25D9%2588%25D8%25A8%2B%25D8%25A7%25D9%2584%25D8%25B4%25D9%2585%25D8%25B3%2B4K%2B%25D9%2584%25D9%2584%25D8%25A7%25D8%25A8%25D8%25AA%25D9%2588%25D8%25A8%2B%25D9%2588%25D8%25A7%25D9%2584%25D9%2583%25D9%2585%25D8%25A8%25D9%258A%25D9%2588%25D8%25AA%25D8%25B1.jpg') center center / cover no-repeat;
+    filter: brightness(0.3);
+    z-index: -1;
+}
+
+.main-header {
+    text-align: center;
+    padding: 30px;
+    background: var(--transparent-bg);
+    color: var(--text-color);
+    border-bottom: 2px solid var(--highlight-color);
+}
+
+.main-header .logo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.rules-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--transparent-bg);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.rule {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.rule:hover {
+    background: var(--highlight-color);
+    color: var(--background-color);
+}
+
+.rule-title {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.rule-details {
+    display: none;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+.discord-img {
+    width: 50px; /* تحديد حجم الصورة */
+    height: 50px; /* تحديد حجم الصورة */
+    cursor: pointer; /* تغيير المؤشر عند التمرير على الصورة */
+    transition: transform 0.3s ease; /* إضافة تأثير التحويل */
+}
+
+.discord-img:hover {
+    transform: scale(1.1); /* تكبير الصورة عند التمرير عليها */
+}
+
+/* إضافة حقوق الملكية في الأسفل مع الشفافية */
+.rights {
+    position: fixed; /* لتثبيتها في أسفل الصفحة */
+    bottom: 10px; /* المسافة من الأسفل */
+    left: 50%; /* توسيط الحقوق أفقياً */
+    transform: translateX(-50%); /* لضبط التوسيط الدقيق */
+    background: rgba(0, 0, 0, 0.6); /* خلفية شفافة مع اللون الأسود */
+    color: #ffffff; /* لون النص */
+    padding: 10px 20px; /* الحشو من جميع الجهات */
+    border-radius: 15px; /* الزوايا المدورة */
+    font-size: 1rem; /* حجم الخط */
+    z-index: 9999; /* التأكد من أنه فوق جميع العناصر الأخرى */
+    text-align: center; /* محاذاة النص في الوسط */
+}
